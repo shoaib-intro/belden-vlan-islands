@@ -86,8 +86,8 @@ The architecture diagram shows how I separated data validation, core analysis, A
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/vlan-islands.git
-cd vlan-islands
+git clone https://github.com/shoaib-intro/belden-vlan-islands.git
+cd belden-vlan-islands
 
 # Install in development mode
 pip install -e .
@@ -580,8 +580,8 @@ I welcome contributions! If you'd like to help improve this tool:
 
 ```bash
 # Clone and setup development environment
-git clone https://github.com/your-org/vlan-islands.git
-cd vlan-islands
+git clone https://github.com/shoaib-intro/belden-vlan-islands.git
+cd vbelden-vlan-islands
 
 # Create virtual environment
 python -m venv venv
