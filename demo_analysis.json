@@ -1,0 +1,987 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-09-04T21:38:06.964238",
+    "total_vlans_analyzed": 20,
+    "problematic_vlans_count": 9,
+    "total_islands": 63
+  },
+  "topology_summary": {
+    "total_devices": 58,
+    "total_links": 76,
+    "total_vlans": 20,
+    "device_types": {
+      "switch": 36,
+      "router": 2,
+      "controller": 2,
+      "access-point": 18
+    },
+    "device_roles": {
+      "core": 2,
+      "distribution": 6,
+      "access": 26,
+      "edge": 2,
+      "wifi": 20,
+      "storage": 2
+    },
+    "average_links_per_device": 2.6206896551724137
+  },
+  "vlan_analysis": [
+    {
+      "vlan_id": 1,
+      "vlan_name": "Default",
+      "total_devices": 36,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 34,
+      "isolated_devices": 2,
+      "fragmentation_ratio": 0.0556,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01",
+            "acc-sw-a-floor2-03",
+            "core-sw-02",
+            "acc-sw-b-floor3-02",
+            "dist-sw-bldg-a-01",
+            "storage-sw-01",
+            "acc-sw-c-floor3-02",
+            "dist-sw-bldg-b-02",
+            "acc-sw-a-floor2-02",
+            "dist-sw-bldg-c-01",
+            "acc-sw-c-floor1-03",
+            "acc-sw-c-floor2-01",
+            "acc-sw-a-floor3-01",
+            "dist-sw-bldg-a-02",
+            "acc-sw-c-floor1-01",
+            "acc-sw-a-floor3-02",
+            "acc-sw-c-floor2-02",
+            "acc-sw-c-floor2-03",
+            "dist-sw-bldg-c-02",
+            "acc-sw-b-floor1-01",
+            "acc-sw-b-floor2-03",
+            "acc-sw-a-floor2-01",
+            "acc-sw-b-floor3-01",
+            "acc-sw-a-floor1-02",
+            "acc-sw-b-floor2-02",
+            "acc-sw-b-floor2-01",
+            "acc-sw-b-floor1-03",
+            "acc-sw-a-floor1-03",
+            "storage-sw-02",
+            "core-sw-01",
+            "acc-sw-a-floor1-01",
+            "dist-sw-bldg-b-01",
+            "acc-sw-c-floor1-02",
+            "acc-sw-b-floor1-02"
+          ],
+          "device_count": 34,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "dmz-sw-01",
+            "dmz-sw-02"
+          ],
+          "device_count": 2,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 10,
+      "vlan_name": "Management",
+      "total_devices": 40,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 40,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01",
+            "acc-sw-a-floor2-03",
+            "core-sw-02",
+            "acc-sw-b-floor3-02",
+            "dist-sw-bldg-a-01",
+            "storage-sw-01",
+            "acc-sw-c-floor3-02",
+            "dist-sw-bldg-b-02",
+            "acc-sw-a-floor2-02",
+            "dist-sw-bldg-c-01",
+            "acc-sw-c-floor1-03",
+            "dmz-sw-02",
+            "acc-sw-a-floor3-01",
+            "acc-sw-c-floor2-01",
+            "dist-sw-bldg-a-02",
+            "acc-sw-c-floor1-01",
+            "acc-sw-a-floor3-02",
+            "acc-sw-c-floor2-02",
+            "acc-sw-c-floor2-03",
+            "dist-sw-bldg-c-02",
+            "acc-sw-b-floor1-01",
+            "acc-sw-b-floor2-03",
+            "wifi-controller-02",
+            "acc-sw-a-floor2-01",
+            "acc-sw-b-floor3-01",
+            "dmz-sw-01",
+            "acc-sw-a-floor1-02",
+            "acc-sw-b-floor2-02",
+            "acc-sw-b-floor2-01",
+            "wifi-controller-01",
+            "acc-sw-b-floor1-03",
+            "acc-sw-a-floor1-03",
+            "storage-sw-02",
+            "core-sw-01",
+            "acc-sw-a-floor1-01",
+            "dist-sw-bldg-b-01",
+            "router-01",
+            "acc-sw-c-floor1-02",
+            "acc-sw-b-floor1-02",
+            "router-02"
+          ],
+          "device_count": 40,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 20,
+      "vlan_name": "Servers",
+      "total_devices": 4,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 4,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "storage-sw-02",
+            "storage-sw-01",
+            "core-sw-02",
+            "core-sw-01"
+          ],
+          "device_count": 4,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 30,
+      "vlan_name": "WiFi-Corporate",
+      "total_devices": 22,
+      "island_count": 19,
+      "has_connectivity_issues": true,
+      "main_island_size": 4,
+      "isolated_devices": 18,
+      "fragmentation_ratio": 0.8182,
+      "islands": [
+        {
+          "island_id": 2,
+          "devices": [
+            "wifi-controller-02",
+            "core-sw-02",
+            "wifi-controller-01",
+            "core-sw-01"
+          ],
+          "device_count": 4,
+          "is_main_island": true
+        },
+        {
+          "island_id": 1,
+          "devices": [
+            "ap-c-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 3,
+          "devices": [
+            "ap-a-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 4,
+          "devices": [
+            "ap-c-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 5,
+          "devices": [
+            "ap-a-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 6,
+          "devices": [
+            "ap-b-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 7,
+          "devices": [
+            "ap-a-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 8,
+          "devices": [
+            "ap-b-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 9,
+          "devices": [
+            "ap-b-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 10,
+          "devices": [
+            "ap-a-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 11,
+          "devices": [
+            "ap-a-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 12,
+          "devices": [
+            "ap-c-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 13,
+          "devices": [
+            "ap-a-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 14,
+          "devices": [
+            "ap-c-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 15,
+          "devices": [
+            "ap-c-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 16,
+          "devices": [
+            "ap-c-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 17,
+          "devices": [
+            "ap-b-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 18,
+          "devices": [
+            "ap-b-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 19,
+          "devices": [
+            "ap-b-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 31,
+      "vlan_name": "WiFi-Guest",
+      "total_devices": 22,
+      "island_count": 19,
+      "has_connectivity_issues": true,
+      "main_island_size": 4,
+      "isolated_devices": 18,
+      "fragmentation_ratio": 0.8182,
+      "islands": [
+        {
+          "island_id": 2,
+          "devices": [
+            "wifi-controller-02",
+            "core-sw-02",
+            "wifi-controller-01",
+            "core-sw-01"
+          ],
+          "device_count": 4,
+          "is_main_island": true
+        },
+        {
+          "island_id": 1,
+          "devices": [
+            "ap-c-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 3,
+          "devices": [
+            "ap-a-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 4,
+          "devices": [
+            "ap-c-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 5,
+          "devices": [
+            "ap-a-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 6,
+          "devices": [
+            "ap-b-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 7,
+          "devices": [
+            "ap-a-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 8,
+          "devices": [
+            "ap-b-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 9,
+          "devices": [
+            "ap-b-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 10,
+          "devices": [
+            "ap-a-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 11,
+          "devices": [
+            "ap-a-floor1-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 12,
+          "devices": [
+            "ap-c-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 13,
+          "devices": [
+            "ap-a-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 14,
+          "devices": [
+            "ap-c-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 15,
+          "devices": [
+            "ap-c-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 16,
+          "devices": [
+            "ap-c-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 17,
+          "devices": [
+            "ap-b-floor1-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 18,
+          "devices": [
+            "ap-b-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        },
+        {
+          "island_id": 19,
+          "devices": [
+            "ap-b-floor2-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 40,
+      "vlan_name": "VoIP",
+      "total_devices": 32,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 32,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01",
+            "acc-sw-a-floor2-03",
+            "core-sw-02",
+            "acc-sw-b-floor3-02",
+            "dist-sw-bldg-a-01",
+            "acc-sw-c-floor3-02",
+            "dist-sw-bldg-b-02",
+            "acc-sw-a-floor2-02",
+            "dist-sw-bldg-c-01",
+            "acc-sw-c-floor1-03",
+            "acc-sw-c-floor2-01",
+            "acc-sw-a-floor3-01",
+            "dist-sw-bldg-a-02",
+            "acc-sw-c-floor1-01",
+            "acc-sw-a-floor3-02",
+            "acc-sw-c-floor2-02",
+            "acc-sw-c-floor2-03",
+            "dist-sw-bldg-c-02",
+            "acc-sw-b-floor1-01",
+            "acc-sw-b-floor2-03",
+            "acc-sw-a-floor2-01",
+            "acc-sw-b-floor3-01",
+            "acc-sw-a-floor1-02",
+            "acc-sw-b-floor2-02",
+            "acc-sw-b-floor2-01",
+            "acc-sw-b-floor1-03",
+            "acc-sw-a-floor1-03",
+            "core-sw-01",
+            "acc-sw-a-floor1-01",
+            "dist-sw-bldg-b-01",
+            "acc-sw-c-floor1-02",
+            "acc-sw-b-floor1-02"
+          ],
+          "device_count": 32,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 50,
+      "vlan_name": "Corporate",
+      "total_devices": 32,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 32,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01",
+            "acc-sw-a-floor2-03",
+            "core-sw-02",
+            "acc-sw-b-floor3-02",
+            "dist-sw-bldg-a-01",
+            "acc-sw-c-floor3-02",
+            "dist-sw-bldg-b-02",
+            "acc-sw-a-floor2-02",
+            "dist-sw-bldg-c-01",
+            "acc-sw-c-floor1-03",
+            "acc-sw-c-floor2-01",
+            "acc-sw-a-floor3-01",
+            "dist-sw-bldg-a-02",
+            "acc-sw-c-floor1-01",
+            "acc-sw-a-floor3-02",
+            "acc-sw-c-floor2-02",
+            "acc-sw-c-floor2-03",
+            "dist-sw-bldg-c-02",
+            "acc-sw-b-floor1-01",
+            "acc-sw-b-floor2-03",
+            "acc-sw-a-floor2-01",
+            "acc-sw-b-floor3-01",
+            "acc-sw-a-floor1-02",
+            "acc-sw-b-floor2-02",
+            "acc-sw-b-floor2-01",
+            "acc-sw-b-floor1-03",
+            "acc-sw-a-floor1-03",
+            "core-sw-01",
+            "acc-sw-a-floor1-01",
+            "dist-sw-bldg-b-01",
+            "acc-sw-c-floor1-02",
+            "acc-sw-b-floor1-02"
+          ],
+          "device_count": 32,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 60,
+      "vlan_name": "DMZ",
+      "total_devices": 6,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 6,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "core-sw-02",
+            "dmz-sw-01",
+            "dmz-sw-02",
+            "core-sw-01",
+            "router-01",
+            "router-02"
+          ],
+          "device_count": 6,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 100,
+      "vlan_name": "Building-A-Users",
+      "total_devices": 10,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 10,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-a-floor2-03",
+            "acc-sw-a-floor1-03",
+            "acc-sw-a-floor2-02",
+            "dist-sw-bldg-a-01",
+            "acc-sw-a-floor2-01",
+            "acc-sw-a-floor1-01",
+            "acc-sw-a-floor3-01",
+            "dist-sw-bldg-a-02",
+            "acc-sw-a-floor1-02",
+            "acc-sw-a-floor3-02"
+          ],
+          "device_count": 10,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 110,
+      "vlan_name": "Building-B-Users",
+      "total_devices": 10,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 10,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-b-floor3-02",
+            "acc-sw-b-floor3-01",
+            "acc-sw-b-floor1-03",
+            "dist-sw-bldg-b-01",
+            "acc-sw-b-floor2-02",
+            "acc-sw-b-floor2-01",
+            "dist-sw-bldg-b-02",
+            "acc-sw-b-floor1-02",
+            "acc-sw-b-floor1-01",
+            "acc-sw-b-floor2-03"
+          ],
+          "device_count": 10,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 120,
+      "vlan_name": "Building-C-Users",
+      "total_devices": 10,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 10,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01",
+            "dist-sw-bldg-c-01",
+            "acc-sw-c-floor1-03",
+            "acc-sw-c-floor2-01",
+            "acc-sw-c-floor1-01",
+            "acc-sw-c-floor2-02",
+            "acc-sw-c-floor3-02",
+            "acc-sw-c-floor1-02",
+            "acc-sw-c-floor2-03",
+            "dist-sw-bldg-c-02"
+          ],
+          "device_count": 10,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 200,
+      "vlan_name": "Printers-A",
+      "total_devices": 4,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 4,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-a-floor2-01",
+            "acc-sw-a-floor3-01",
+            "acc-sw-a-floor1-01",
+            "dist-sw-bldg-a-01"
+          ],
+          "device_count": 4,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 201,
+      "vlan_name": "Printers-B",
+      "total_devices": 3,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 2,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.3333,
+      "islands": [
+        {
+          "island_id": 2,
+          "devices": [
+            "acc-sw-b-floor1-01",
+            "dist-sw-bldg-b-01"
+          ],
+          "device_count": 2,
+          "is_main_island": true
+        },
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-b-floor2-01"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 202,
+      "vlan_name": "Printers-C",
+      "total_devices": 3,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 3,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "dist-sw-bldg-c-02",
+            "acc-sw-c-floor3-02",
+            "acc-sw-c-floor1-02"
+          ],
+          "device_count": 3,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 300,
+      "vlan_name": "IoT-Bldg-A",
+      "total_devices": 2,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 1,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.5,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-a-floor2-03"
+          ],
+          "device_count": 1,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "acc-sw-a-floor1-03"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 301,
+      "vlan_name": "IoT-Bldg-B",
+      "total_devices": 2,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 1,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.5,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-b-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "acc-sw-b-floor2-03"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 302,
+      "vlan_name": "IoT-Bldg-C",
+      "total_devices": 1,
+      "island_count": 1,
+      "has_connectivity_issues": false,
+      "main_island_size": 1,
+      "isolated_devices": 0,
+      "fragmentation_ratio": 0.0,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor1-03"
+          ],
+          "device_count": 1,
+          "is_main_island": true
+        }
+      ]
+    },
+    {
+      "vlan_id": 400,
+      "vlan_name": "Security-Cameras-A",
+      "total_devices": 3,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 2,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.3333,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-a-floor1-02",
+            "dist-sw-bldg-a-01"
+          ],
+          "device_count": 2,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "acc-sw-a-floor3-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 401,
+      "vlan_name": "Security-Cameras-B",
+      "total_devices": 2,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 1,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.5,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-b-floor1-03"
+          ],
+          "device_count": 1,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "dist-sw-bldg-b-02"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    },
+    {
+      "vlan_id": 402,
+      "vlan_name": "Security-Cameras-C",
+      "total_devices": 2,
+      "island_count": 2,
+      "has_connectivity_issues": true,
+      "main_island_size": 1,
+      "isolated_devices": 1,
+      "fragmentation_ratio": 0.5,
+      "islands": [
+        {
+          "island_id": 1,
+          "devices": [
+            "acc-sw-c-floor3-01"
+          ],
+          "device_count": 1,
+          "is_main_island": true
+        },
+        {
+          "island_id": 2,
+          "devices": [
+            "acc-sw-c-floor2-03"
+          ],
+          "device_count": 1,
+          "is_main_island": false
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    "[!] Detected 9 VLANs with connectivity issues:",
+    "  • VLAN 30 (WiFi-Corporate): 19 islands, 18 devices isolated",
+    "  • VLAN 31 (WiFi-Guest): 19 islands, 18 devices isolated",
+    "  • VLAN 300 (IoT-Bldg-A): 2 islands, 1 devices isolated",
+    "  • VLAN 301 (IoT-Bldg-B): 2 islands, 1 devices isolated",
+    "  • VLAN 401 (Security-Cameras-B): 2 islands, 1 devices isolated",
+    "  • VLAN 402 (Security-Cameras-C): 2 islands, 1 devices isolated",
+    "  • VLAN 201 (Printers-B): 2 islands, 1 devices isolated",
+    "  • VLAN 400 (Security-Cameras-A): 2 islands, 1 devices isolated",
+    "  • VLAN 1 (Default): 2 islands, 2 devices isolated",
+    "",
+    "💡 Recommended actions:",
+    "1. Review physical connectivity between isolated devices",
+    "2. Check VLAN configuration on intermediate switches",
+    "3. Verify trunk port configurations",
+    "4. Consider adding redundant links for critical paths",
+    "5. Use network visualization to identify connection gaps",
+    "",
+    "🔥 Priority: VLAN 30 has 81.8% of devices isolated - investigate immediately"
+  ],
+  "summary": {
+    "healthy_vlans": 11,
+    "problematic_vlans": 9,
+    "worst_fragmented_vlan": {
+      "vlan_id": 30,
+      "vlan_name": "WiFi-Corporate",
+      "fragmentation_ratio": 0.8182
+    }
+  }
+}

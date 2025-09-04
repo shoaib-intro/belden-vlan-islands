@@ -94,6 +94,10 @@ pip install -e .
 
 # Or install from PyPI (when published)
 pip install vlan-islands
+
+# Run Command it will install setup itself and spinup two frotnends
+python demo.py
+
 ```
 
 **Note**: The CLI command `vlan-islands` may not be available in PATH on Windows. Use `python -m vlan_islands.cli` instead.
