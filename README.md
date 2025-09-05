@@ -3,7 +3,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 
-Thanks for giving me opertunity to built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process. `In the end I haev attached gallary please have a look` 
+Thanks for giving me opertunity to built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process. `In the end I have attached gallery please have a look` 
 
 ## 🌐 What are VLAN Islands?
 
