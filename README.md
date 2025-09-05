@@ -1,9 +1,9 @@
 # VLAN Islands Detection & Troubleshooting Tool
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-I built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process.
+
+Thanks for giving me opertunity to built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process.
 
 ## 🌐 What are VLAN Islands?
 
@@ -13,6 +13,8 @@ VLAN islands are segments of the same VLAN that are disconnected from each other
 - Unexpected routing behavior  
 - Difficulty troubleshooting network issues
 - Security vulnerabilities due to inconsistent policy enforcement
+
+![alt text](data/diagrams/vlan-island.png)
 
 The diagram above shows VLAN 100 with **3 islands**: one main connected island and two isolated islands that cannot communicate with the main network or each other, despite being in the same VLAN.
 
@@ -72,6 +74,8 @@ To ensure 100% accuracy, I implemented and tested **4 different algorithms**:
 | **Implementation** | ✅ Simple & Clean | Simple | Complex | External dependency |
 | **Use Case Fit** | ✅ Perfect for static graphs | Better for shortest paths | Better for dynamic graphs | General purpose |
 
+![alt text](data/diagrams/algo-workflow.png)
+
 The flowchart above shows how my DFS-based algorithm processes each VLAN to detect islands through connected component analysis.
 
 ## 🏗️ System Architecture
@@ -79,6 +83,9 @@ The flowchart above shows how my DFS-based algorithm processes each VLAN to dete
 I designed the tool with a modular, extensible architecture for maintainability and scalability. Having worked on several network tools before, I learned the importance of clean separation of concerns:
 
 The architecture diagram shows how I separated data validation, core analysis, AI integration, and multiple interface options into distinct modules.
+
+![alt text](data/diagrams/architecture.png)
+
 
 ## 🚀 Quick Start
 
@@ -95,7 +102,7 @@ pip install -e .
 # Or install from PyPI (when published)
 pip install vlan-islands
 
-# Run Command it will install setup itself and spinup two frotnends
+# Run Command it will install setup itself and spinup two frotnends one for visualization second chatbot
 python demo.py
 
 ```
@@ -241,16 +248,16 @@ I trained the chatbot with expertise in:
 #### **AI Model Limitations**
 - **Knowledge Cutoff**: Based on training data up to knowledge cutoff date
 - **Hallucination Risk**: May occasionally generate plausible but incorrect information
-- **Context Window**: Limited conversation history (though session management helps)
+- **Context Window**: Limited conversation history (though session management helps for scaling up solution)
 
 #### **Dependency Requirements**
 - **OpenAI API Key**: Requires valid API key and internet connectivity
 - **Cost Considerations**: API usage incurs costs based on token consumption
 - **Rate Limiting**: Subject to OpenAI API rate limits
 
-### 🔧 Configuration & Customization
+### 🔧 Configuration & Customization 
 
-The chatbot behavior can be customized through `chatbot_config.yaml`:
+The chatbot behavior can be customized through system prompt `chatbot_config.yaml`:
 
 ```yaml
 system_prompt: "Custom base prompt for your organization"
@@ -476,13 +483,14 @@ for each VLAN:
 pip install -e ".[dev]"
 
 # Run all tests
-pytest
+pytest              # if pytest is in PATH
+python -m pytest    # if pytest is not in PATH
 
 # Run with coverage
-pytest --cov=vlan_islands --cov-report=html
+python -m pytest --cov=vlan_islands --cov-report=html
 
 # Run specific test file
-pytest tests/test_analyzer.py -v
+python -m pytest tests/test_analyzer.py -v
 
 # Run algorithm verification
 python verify_algorithm.py
@@ -491,6 +499,8 @@ python verify_algorithm.py
 ### VLAN Analysis Process
 
 Here's how my algorithm analyzes each VLAN for islands:
+
+![alt text](data/diagrams/algo-analysis.png)
 
 The diagram above shows the complete analysis process I built for VLAN 30, demonstrating how my DFS implementation identifies the main connected component and discovers 18 isolated access points.
 
@@ -603,7 +613,7 @@ pytest
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is Licensed for Belden solely.
 
 ## 🙏 Acknowledgments
 
@@ -655,3 +665,58 @@ Special thanks to the network engineering community for inspiration and feedback
 
 ---
 
+
+# Gallery
+
+## A) VLAN Visualization Board
+
+### Visualize Network Topology
+
+![alt text](data/images/visualize_network_topology.png)
+
+### Visualize All Health VLANs
+
+![alt text](data/images/healthy-vlans.png)
+
+### Visualize Islands details Sheet
+
+![alt text](data/images/islands_details.png)
+
+### Report Preview
+> A sample CSV report is shown here. In the GUI, there are also options to download the report as **Text** or **JSON**.
+
+![alt text](data/images/islands_sheet_csv.png)
+
+### Visualize Specific Network Topology
+
+![alt text](data/images/specific_vlan_visualize.png)
+
+## B) Chatbot Glimpse
+
+> ⚠️ Note: You need an **OpenAI API key**.  
+> - Place it inside a `.env` file (or rename `.env.example` to `.env` and set the key with the flag `OPENAI_API_KEY`).  
+> - Alternatively, you can enter the key directly in the frontend.  
+
+### Bot Default Suggestions
+
+![alt text](data/images/bot_default_suggestions.png)
+
+### How the Bot Suggests Fixes
+
+![alt text](data/images/bot_default_suggestions_.png)
+
+### Preserving Contextual Memory  
+
+![alt text](data/images/bot_troubleshooting.png)
+
+
+### Contexual memory can be exported:
+Conversation history is visible here.  
+`To scale up, session management could be improved by storing summarized assistant responses.`
+
+![alt text](data/images/bot_context.png)
+
+
+---
+
+**Note:** Check the system prompt (`chatbot_config.yaml`). It is highly customizable by SMEs and can be adapted to handle multiple specialties.
