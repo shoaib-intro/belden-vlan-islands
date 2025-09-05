@@ -3,7 +3,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 
-Thanks for giving me opertunity to built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process.
+Thanks for giving me opertunity to built this AI-powered solution to help network administrators analyze topologies, identify VLAN islands, and get interactive guidance for resolving connectivity issues. After dealing with countless VLAN troubleshooting sessions, I wanted to create a tool that could automate this tedious process. `In the end I haev attached gallary please have a look` 
 
 ## 🌐 What are VLAN Islands?
 
@@ -580,15 +580,6 @@ visualization:
   highlight_islands: true
 ```
 
-## 🤝 Contributing
-
-I welcome contributions! If you'd like to help improve this tool:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes** with tests
-4. **Run the test suite**: `pytest`
-5. **Submit a pull request**
 
 ### Development Setup
 
